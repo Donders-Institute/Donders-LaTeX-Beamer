@@ -1,0 +1,70 @@
+% ======================================================================
+% ======================================================================
+% ======================================================================
+%
+% UNOFFICIAL style for beamer presentations at RU-DI
+% Radboud University, Donders Institute,
+% Nijmengen, Netherlands
+%
+%     Author: Pierre Guetschel <pierre.guetschel@donders.ru.nl>
+%       Date: Oct 2022
+% Instructions:
+% - to create the title page, use: \titleframe
+% - to create a section page, use: \sectionframe
+%
+% Inspirations:
+% - https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+% - 
+%
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
+% : base colors
+\definecolor{rudi-black}{cmyk}{0,0,0,1}
+\definecolor{rudi-dark-red}{cmyk}{0,1,1,0.5}
+\definecolor{rudi-ru-red}{cmyk}{0,1,1,0.25}
+\definecolor{rudi-bright-red}{cmyk}{0,1,1,0}
+% : extended colors
+\definecolor{rudi-dark-orange}{cmyk}{0,0.70,1,0}
+\definecolor{rudi-light-orange}{cmyk}{0,0.25,1,0}
+\definecolor{rudi-yellow}{cmyk}{0,0,1,0}
+% : additional colors (unofficial)
+\definecolor{rudi-dead-red}{cmyk}{0,0.5,0.5,1}
+\definecolor{rudi-water-red}{cmyk}{0,0.05,0.05,0}
+\definecolor{rudi-water-orange}{cmyk}{0,0.04,0.02,0}
+\definecolor{rudi-water-yellow}{cmyk}{0,0.02,0.04,0}
+
+
+% set colors
+\setbeamercolor*{background canvas}{bg=white}
+
+
+\setbeamercolor{titlelike}{fg=rudi-dark-red}
+\setbeamercolor*{title}{fg=black}
+\setbeamerfont{title}{size=\Huge}
+\setbeamercolor*{author}{fg=rudi-dark-red}
+\setbeamercolor*{date}{fg=black}
+
+\setbeamerfont{subtitle}{size=\large}
+
+\setbeamercolor{frametitle}{fg=rudi-dark-red}
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamercolor{framesubtitle}{fg=black}
+\setbeamerfont{framesubtitle}{size=\small}
+\setbeamerfont{section title}{size=\huge}
+
+\setbeamercolor*{item}{fg=rudi-dark-orange}
+\setbeamercolor*{subitem}{fg=rudi-light-orange}
+\setbeamercolor*{subsubitem}{fg=rudi-yellow}
+
+\setbeamercolor*{normal text}{fg=black}
+\setbeamercolor*{alerted text}{fg=rudi-dark-orange}
+\setbeamercolor*{structure text}{fg=rudi-bright-red}
+
+\setbeamercolor*{block title}{fg=white, bg=rudi-dark-orange}
+\setbeamercolor*{block body}{fg=black, bg=rudi-water-orange}
+
+\setbeamercolor*{author in head/foot}{fg=white, bg=rudi-dark-red}
+\setbeamercolor*{title in head/foot}{fg=white, bg=rudi-ru-red}
+\setbeamercolor*{date in head/foot}{fg=white, bg=rudi-bright-red}

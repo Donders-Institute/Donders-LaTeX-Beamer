@@ -1,0 +1,91 @@
+% ======================================================================
+% ======================================================================
+% ======================================================================
+%
+% UNOFFICIAL style for beamer presentations at RU-DI
+% Radboud University, Donders Institute,
+% Nijmengen, Netherlands
+%
+%     Author: Pierre Guetschel <pierre.guetschel@donders.ru.nl>
+%       Date: Oct 2022
+% Instructions:
+% - to create the title page, use: \titleframe
+% - to create a section page, use: \sectionframe
+%
+% Inspirations:
+% - https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+% - 
+%
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
+%%%%%%%%%%%%%%%%%% HEADLINE (logo) %%%%%%%%%%%%%%%%%% 
+\newlength{\logoheight}
+\setlength{\logoheight}{1cm}
+
+%\logo{\includegraphics[width=.1\textwidth]{logo_rudi-notext.pdf}}
+\defbeamertemplate*{headline}{rudi}
+{
+\hfill
+\ifnum \ifinsectionframe 1 \else \ifintitleframe 1 \else 0 \fi\fi=1 % if in_title_frame OR in_section_frame
+	\includegraphics[height=\logoheight]{logo_rudi.pdf}
+\else
+	\includegraphics[height=\logoheight]{logo_rudi-notext.pdf}
+\fi
+\vspace{-\logoheight}
+}
+
+
+
+%%%%%%%%%%%%%%%%%% FOOTLINE (logo) %%%%%%%%%%%%%%%%%% 
+\newlength{\footlogoheight}
+\setlength{\footlogoheight}{.2cm}
+
+\defbeamertemplate*{footline}{rudi}
+{
+\ifnum \ifinsectionframe 1 \else \ifintitleframe 1 \else 0 \fi\fi=1 % if in_title_frame OR in_section_frame
+  {}
+\else
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+\fi
+}
+
+
+
+%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%
+\newlength{\sidebarunit}
+\setlength{\sidebarunit}{1.5mm}
+\newcommand*{\sidebarwidth}{3\sidebarunit}
+\setbeamersize{sidebar width left=\sidebarwidth}
+
+\defbeamertemplate*{sidebar canvas left}{rudi}
+{
+\ifinsectionframe
+	{}
+\else
+\ifintitleframe
+	{}
+\else
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node[fill=rudi-bright-red, rectangle, anchor=north west, minimum width=3\sidebarunit, minimum height=\paperheight, inner sep=0ex, inner ysep=0ex, outer sep=0ex, outer ysep=0ex] (first band) at (current page.north west) {};%
+		\node[fill=rudi-ru-red, rectangle, anchor=north west, minimum width=2.6\sidebarunit, minimum height=\paperheight, inner sep=0ex, inner ysep=0ex, outer sep=0ex, outer ysep=0ex] (second band) at (current page.north west) {};%
+		\node[fill=rudi-dark-red, rectangle, anchor=north west, minimum width=1.6\sidebarunit, minimum height=\paperheight, inner sep=0ex, inner ysep=0ex, outer sep=0ex, outer ysep=0ex] (third band) at (current page.north west) {};%
+	\end{tikzpicture}%
+\fi\fi
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

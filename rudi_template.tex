@@ -1,0 +1,91 @@
+% ======================================================================
+% ======================================================================
+% ======================================================================
+%
+% UNOFFICIAL style for beamer presentations at RU-DI
+% Radboud University, Donders Institute,
+% Nijmengen, Netherlands
+%
+%     Author: Pierre Guetschel <pierre.guetschel@donders.ru.nl>
+%       Date: Oct 2022
+% Instructions:
+% - to create the title page, use: \titleframe
+% - to create a section page, use: \sectionframe
+%
+% Inspirations:
+% - https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+% - 
+%
+% ======================================================================
+% ======================================================================
+% ======================================================================
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usetheme{rudi} % Radboud University, Donders Institute  beamer theme
+
+%%% Uncomment to remove the foot line: %%%
+%\setbeamertemplate{footline}{}
+
+%%% Uncomment to remove the bands on the left: %%%
+%\setbeamertemplate{sidebar canvas left}{}
+
+
+\title[Beamer theme]{A beamer theme for the Donders Institute!}
+\author[Guetschel]{Pierre~Guetsche}
+\institute[Donders Institute]
+{ 
+	Radboud University, Donders Institute, Nijmegen, Netherlands
+}
+
+\begin{document}
+
+\titleframe % Use this command to create the title page
+
+\section{The first section} 
+\sectionframe % Use this command to create a section page 
+
+\begin{frame} 
+	\frametitle{There Is No Largest Prime Number} 
+	\framesubtitle{The proof uses \textit{reductio ad absurdum}.} 
+	\begin{theorem}
+	There is no largest prime number. 
+	\end{theorem} 
+	\begin{enumerate} 
+	\item<1-| alert@1> Suppose $p$ were the largest prime number. 
+	\item<2-> Let $q$ be the product of the first $p$ numbers. 
+	\item<3-> Then $q+1$ is not divisible by any of them. 
+	\begin{itemize}
+	\item 3-a
+	\begin{enumerate}
+	\item here
+	\item there
+	\end{enumerate}
+	\item 3-b
+	\end{itemize}
+	\item<1-> But $q + 1$ is greater than $1$, thus divisible by some prime
+	number not in the first $p$ numbers.
+	\end{enumerate}
+\end{frame}
+
+\section{The second section} 
+\sectionframe
+
+\begin{frame}{The last frame's title}
+	\begin{itemize}
+		\item one
+		\item two
+		\begin{itemize}
+			\item two-a
+			\begin{itemize}
+				\item two-a-1
+				\item two-b-2
+			\end{itemize}
+			\item two-b
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\end{document}
