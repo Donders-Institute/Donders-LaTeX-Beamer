@@ -20,25 +20,42 @@
 % ======================================================================
 % ======================================================================
 
+%%% Colors from https://tex.stackexchange.com/questions/146529/design-a-custom-beamer-theme-from-scratch
+%% : base colors
+%\definecolor{rudi-black}{cmyk}{0,0,0,1}
+%\definecolor{rudi-dark-red}{cmyk}{0,1,1,0.5}
+%\definecolor{rudi-ru-red}{cmyk}{0,1,1,0.25}
+%\definecolor{rudi-bright-red}{cmyk}{0,1,1,0}
+%% : extended colors
+%\definecolor{rudi-dark-orange}{cmyk}{0,0.70,1,0}
+%\definecolor{rudi-light-orange}{cmyk}{0,0.25,1,0}
+%\definecolor{rudi-yellow}{cmyk}{0,0,1,0}
+%% : additional colors (unofficial)
+%\definecolor{rudi-dead-red}{cmyk}{0,0.5,0.5,1}
+%\definecolor{rudi-water-red}{cmyk}{0,0.05,0.05,0}
+%\definecolor{rudi-water-orange}{cmyk}{0,0.04,0.02,0}
+%\definecolor{rudi-water-yellow}{cmyk}{0,0.02,0.04,0}
+
 % : base colors
-\definecolor{rudi-black}{cmyk}{0,0,0,1}
-\definecolor{rudi-dark-red}{cmyk}{0,1,1,0.5}
-\definecolor{rudi-ru-red}{cmyk}{0,1,1,0.25}
-\definecolor{rudi-bright-red}{cmyk}{0,1,1,0}
+\definecolor{rudi-black}{RGB}{0,0,0}
+\definecolor{rudi-dark-red}{RGB}{142,0,0}
+\definecolor{rudi-ru-red}{RGB}{190,49,26}
+\definecolor{rudi-bright-red}{RGB}{255,0,0}
 % : extended colors
-\definecolor{rudi-dark-orange}{cmyk}{0,0.70,1,0}
-\definecolor{rudi-light-orange}{cmyk}{0,0.25,1,0}
-\definecolor{rudi-yellow}{cmyk}{0,0,1,0}
+\definecolor{rudi-dark-orange}{RGB}{255,112,0}
+\definecolor{rudi-light-orange}{RGB}{255,195,0}
+\definecolor{rudi-yellow}{RGB}{255,255,0}
+\definecolor{rudi-blue}{RGB}{0,150,190}
+\definecolor{rudi-green}{RGB}{95,160,70}
 % : additional colors (unofficial)
-\definecolor{rudi-dead-red}{cmyk}{0,0.5,0.5,1}
-\definecolor{rudi-water-red}{cmyk}{0,0.05,0.05,0}
-\definecolor{rudi-water-orange}{cmyk}{0,0.04,0.02,0}
-\definecolor{rudi-water-yellow}{cmyk}{0,0.02,0.04,0}
+\definecolor{rudi-dead-red}{cmyk}{0,0.5,0.5,1} % TODO: Update
+\definecolor{rudi-water-red}{cmyk}{0,0.05,0.05,0} % TODO: Update
+\definecolor{rudi-water-orange}{cmyk}{0,0.04,0.02,0} % TODO: Update
+\definecolor{rudi-water-yellow}{cmyk}{0,0.02,0.04,0} % TODO: Update
 
 
-% set colors
+ % : set colors
 \setbeamercolor*{background canvas}{bg=white}
-
 
 \setbeamercolor{titlelike}{fg=rudi-dark-red}
 \setbeamercolor*{title}{fg=black}
@@ -68,3 +85,10 @@
 \setbeamercolor*{author in head/foot}{fg=white, bg=rudi-dark-red}
 \setbeamercolor*{title in head/foot}{fg=white, bg=rudi-ru-red}
 \setbeamercolor*{date in head/foot}{fg=white, bg=rudi-bright-red}
+
+
+%\setbeamercolor{palette primary}{bg=blue,fg=white}
+%\setbeamercolor{palette secondary}{bg=green,fg=white}
+%\setbeamercolor{palette tertiary}{bg=purple,fg=white}
+%\setbeamercolor{palette quaternary}{bg=pink,fg=white}
+
