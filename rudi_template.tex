@@ -44,18 +44,28 @@
 
 \titleframe % Use this command to create the title page
 
-\section{The first section} 
+\section{Beamer elements} 
 \sectionframe % Use this command to create a section page 
 
 \begin{frame} 
-	\frametitle{There Is No Largest Prime Number} 
-	\framesubtitle{The proof uses \textit{reductio ad absurdum}.} 
+	\frametitle{The beamer blocks} 
+	\framesubtitle{This is the slide subtitle} 
 	\begin{theorem}
-	There is no largest prime number. 
+		This is a standard block (here a theorem). 
 	\end{theorem} 
+	\begin{exampleblock}{Example}
+		Here is an example block
+	\end{exampleblock} 
+	Here is a bit of text between the blocks.
+	\begin{alertblock}{Alert}
+		Here is an alert block.
+	\end{alertblock} 
+\end{frame}
+
+\begin{frame}{Itemize and Enumerate}
 	\begin{enumerate} 
-	\item<1-| alert@1> Suppose $p$ were the largest prime number. 
-	\item<2-> Let $q$ be the product of the first $p$ numbers. 
+	\item<1-> Suppose $p$ were the largest prime number. 
+	\item<2-| alert@2> Let $q$ be the product of the first $p$ numbers. 
 	\item<3-> Then $q+1$ is not divisible by any of them. 
 	\begin{itemize}
 	\item 3-a
@@ -70,26 +80,40 @@
 	\end{enumerate}
 \end{frame}
 
-\section{The second section} 
-\sectionframe
-
-\begin{frame}{The last frame's title}
+\begin{frame}{The figures and tables}
 	\begin{figure}
 		\includegraphics[width=4cm]{example-image-a}
 		\caption{Example figure's caption}
 	\end{figure}
-	\begin{itemize}
-		\item one
-		\item two
-		\begin{itemize}
-			\item two-a
-			\begin{itemize}
-				\item two-a-1
-				\item two-b-2
-			\end{itemize}
-			\item two-b
-		\end{itemize}
-	\end{itemize}
+
+\end{frame}
+
+
+\section{Theme colors} 
+\sectionframe
+
+\begin{frame}{Available colors}
+Base colors:\\
+\colorbox{rudi-black}{\color{white} rudi-black}
+\colorbox{rudi-dark-red}{\color{white} rudi-dark-red}
+\colorbox{rudi-ru-red}{\color{white} rudi-ru-red}
+\colorbox{rudi-bright-red}{\color{white} rudi-bright-red}
+\vspace{1em}
+
+Extended colors:\\
+\colorbox{rudi-dark-orange}{\color{white} rudi-dark-orange}
+\colorbox{rudi-light-orange}{rudi-light-orange}
+\colorbox{rudi-yellow}{rudi-yellow}
+\colorbox{rudi-blue}{\color{white} rudi-blue}
+\colorbox{rudi-green}{\color{white} rudi-green}
+\vspace{1em}
+
+Watered colours:\\
+\colorbox{rudi-water-red}{rudi-water-red}
+\colorbox{rudi-water-orange}{rudi-water-orange}
+\colorbox{rudi-water-yellow}{rudi-water-yellow}
+\colorbox{rudi-water-blue}{rudi-water-blue}
+\colorbox{rudi-water-green}{rudi-water-green}
 \end{frame}
 
 \end{document}
